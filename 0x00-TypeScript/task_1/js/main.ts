@@ -11,7 +11,7 @@ export interface Directors extends Teacher {
   numberOfReports: number;
 }
 
-export function printTeacher(firstName: string, lastName: string): string {
+function printTeacher(firstName: string, lastName: string): string {
   return `${firstName[0]}. ${lastName}`;
 }
 
@@ -35,3 +35,5 @@ const director1: Directors = {
 console.log(director1);
 console.log(teacher3);
 console.log(printTeacher("John", "Doe"));
+
+module.exports = { printTeacher }
