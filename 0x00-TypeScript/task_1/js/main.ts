@@ -4,7 +4,7 @@ export interface Teacher {
   fullTimeEmployee: boolean;
   yearsOfExperience?: number;
   location: string;
-  [key: string]: any;
+  [propName: string]: any;
 }
 
 const teacher3: Teacher = {
@@ -14,3 +14,5 @@ const teacher3: Teacher = {
   location: 'London',
   contract: false,
 };
+
+console.log(teacher3);
