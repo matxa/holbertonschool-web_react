@@ -11,7 +11,7 @@ export interface Directors extends Teacher {
   numberOfReports: number;
 }
 
-function printTeacher(firstName: string, lastName: string): string {
+export function printTeacher(firstName: string, lastName: string): string {
   return `${firstName[0]}. ${lastName}`;
 }
 
