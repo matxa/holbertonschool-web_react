@@ -11,29 +11,10 @@ export interface Directors extends Teacher {
   numberOfReports: number;
 }
 
-function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName[0]}. ${lastName}`;
+export interface printTeacherFunction {
+	(firstName: string, lastName: string): string;
 }
 
-const teacher3: Teacher = {
-  firstName: 'John',
-  fullTimeEmployee: false,
-  lastName: 'Doe',
-  location: 'London',
-  contract: false,
-};
-
-const director1: Directors = {
-  firstName: 'John',
-  lastName: 'Doe',
-  location: 'London',
-  fullTimeEmployee: true,
-  numberOfReports: 17,
-};
-
-// Tests
-console.log(director1);
-console.log(teacher3);
-console.log(printTeacher("John", "Doe"));
-
-module.exports = { printTeacher }
+export const printTeacher: printTeacherFunction = function (firstName: string, lastName: string): string {
+	return `${firstName[0]}. ${lastName}`;
+}
