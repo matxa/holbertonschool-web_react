@@ -7,15 +7,14 @@ module.exports = {
 		filename: 'bundle.js'
 	},
 	mode: 'production',
+	performance: {
+    maxAssetSize: 100000,
+  },
 	module: {
     rules: [
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
-      },
+			{
+				test: /\.css$/, use: ['style-loader', 'css-loader']
+			},
 			{
 				test: /\.(gif|png|jpe?g|svg)$/i,
 				use: [
@@ -23,12 +22,12 @@ module.exports = {
 					{
 						loader: 'image-webpack-loader',
 						options: {
-							bypassOnDebug: true,
-							disable: true,
+							bypassOnDebug: true, // webpack@1.x
+							disable: true, // webpack@2.x and newer
 						},
 					},
 				],
 			}
-    ]
-  }
+    ],
+	},
 }
