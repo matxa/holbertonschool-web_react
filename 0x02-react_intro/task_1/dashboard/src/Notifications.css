@@ -1,0 +1,4 @@
+div .Notifications {
+  border: 1px dashed var(--holberton-color);
+  padding: 20px;
+}

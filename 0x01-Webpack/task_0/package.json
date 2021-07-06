@@ -1,0 +1,19 @@
+{
+  "name": "0x01-Webpack",
+  "version": "1.0.0",
+  "description": "0x01-Webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
