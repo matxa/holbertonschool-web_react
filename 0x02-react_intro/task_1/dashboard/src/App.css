@@ -7,7 +7,7 @@
   font-family: var(--default-font);
 }
 
-.holberton {
+.App-header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -24,8 +24,9 @@
   display: inline;
 }
 
-.App-body p {
-  padding: 2.5%;
+.App-body {
+  padding-left: 2.5%;
+  padding-top: 2.5%;
 }
 
 .App-footer {
@@ -38,4 +39,7 @@
   align-items: center;
   font-weight: lighter;
   font-style: italic;
+}
+input {
+  margin: 5px;
 }
