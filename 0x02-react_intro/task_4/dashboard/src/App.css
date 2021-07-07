@@ -1,0 +1,45 @@
+:root {
+  --holberton-color: #e0344c;
+  --default-font: Sans-serif;
+}
+
+.App {
+  font-family: var(--default-font);
+}
+
+.App-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 3px solid var(--holberton-color);
+}
+
+.App-header h1 {
+  color: var(--holberton-color);
+}
+
+.App-header img {
+  width: 250px;
+  height: 250px;
+  display: inline;
+}
+
+.App-body {
+  padding-left: 2.5%;
+  padding-top: 2.5%;
+}
+
+.App-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 3px solid var(--holberton-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: lighter;
+  font-style: italic;
+}
+input {
+  margin: 5px;
+}
