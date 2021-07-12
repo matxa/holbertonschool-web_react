@@ -7,6 +7,10 @@ module.exports = {
 		filename: 'bundle.js'
 	},
 	mode: 'production',
+  devServer: {
+    hot: true,
+    devtool: "inline-source-map"
+  },
   module: {
     rules: [
       {
