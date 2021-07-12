@@ -1,9 +1,9 @@
 const path = require('path');
 
 module.exports = {
-	entry: './src',
+	entry: path.resolve(process.cwd(), 'src/index.js'),
 	output: {
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(process.cwd(), 'dist'),
 		filename: 'bundle.js'
 	},
 	mode: 'production',
@@ -12,11 +12,6 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.js$/,
-        enforce: "pre",
-        use: ["source-map-loader"],
       },
       {
         test: /\.css$/i,
