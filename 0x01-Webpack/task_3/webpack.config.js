@@ -25,6 +25,11 @@ module.exports = {
     compress: true,
     port: 8564,
   },
+	optimization: {
+		splitChunks: {
+			chunks: 'all',
+		},
+	},
 	module: {
     rules: [
 			{
