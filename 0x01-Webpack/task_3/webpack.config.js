@@ -1,21 +1,33 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	entry: './js/dashboard_main.js',
+	entry: {
+		header: './modules/header/header.js',
+		body: './modules/body/body.js',
+		footer: './modules/footer/footer.js',
+	},
+	plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Task 3',
+    }),
+  ],
 	output: {
 		path: path.resolve(__dirname, 'public'),
-		filename: 'bundle.js'
+		filename: '[name].bundle.js'
 	},
-	mode: 'production',
+	mode: 'development',
+	devServer: {
+    contentBase: path.join(__dirname, 'public'),
+    compress: true,
+    port: 8564,
+  },
 	module: {
     rules: [
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
-      },
+			{
+				test: /\.css$/i,
+				use: ["style-loader", "css-loader"],
+			},
 			{
 				test: /\.(gif|png|jpe?g|svg)$/i,
 				use: [
