@@ -19,6 +19,7 @@ module.exports = {
 		filename: '[name].bundle.js'
 	},
 	mode: 'development',
+	devtool: 'inline-source-map',
 	devServer: {
     contentBase: path.join(__dirname, 'public'),
     compress: true,
