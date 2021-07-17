@@ -16,13 +16,12 @@ describe('Test Utils', () => {
   it('getFooterCopy', () => {
     expect(getFooterCopy(true)).toBe("Holberton School");
   });
-  
+
   it('getLatestNotification', () => {
     const str = getLatestNotification();
     expect(str).toContain('<strong>');
     expect(str).toContain('</strong>');
   });
-  
 
 });
 

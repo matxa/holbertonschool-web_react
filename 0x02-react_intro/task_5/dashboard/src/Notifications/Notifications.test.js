@@ -1,16 +1,13 @@
 import Notifications from './Notifications';
 import './Notifications.css'
-import Enzyme, { shallow } from 'enzyme';
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-import logo from './holberton_logo.jpeg'
-import { getLatestNotification } from './utils.js';
-
-Enzyme.configure({ adapter: new Adapter() });
+import { shallow } from 'enzyme';
+import React from 'react';
+import { getLatestNotification } from '../utils/utils';
 
 describe('Test various components of the Notifications', () => {
 
   it('Notifications renders without crashing', () => {
-    shallow(< Notifications />);
+    shallow(<Notifications />);
   });
 
   it('Notifications renders three list items', () => {

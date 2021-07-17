@@ -1,11 +1,9 @@
 import App from './App';
-import './App.css'
-import Enzyme, { shallow } from 'enzyme';
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-import logo from './holberton_logo.jpeg'
-import { getFullYear, getFooterCopy } from './utils.js';
-
-Enzyme.configure({ adapter: new Adapter() });
+import './App.css';
+import { shallow } from 'enzyme';
+import React from 'react';
+import logo from '../assets/holberton-logo.jpeg';
+import { getFullYear, getFooterCopy } from '../utils/utils';
 
 describe('Test various components of the App', () => {
 
