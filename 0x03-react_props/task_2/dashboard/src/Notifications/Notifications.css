@@ -1,0 +1,12 @@
+div .Notifications {
+  border: 1px dashed var(--holberton-color);
+  padding: 20px;
+}
+
+[data-notification-type="default"] {
+  color: blue;
+}
+
+[data-notification-type="urgent"] {
+  color: red;
+}
