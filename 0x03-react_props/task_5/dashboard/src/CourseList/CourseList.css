@@ -1,0 +1,12 @@
+:root {
+  --border: 1px solid #dedede;
+}
+
+table {
+  width: 80%;
+  text-align: center;
+  border: var(--border);
+}
+thead th {
+  border-bottom: var(--border);
+}
