@@ -6,3 +6,11 @@
 .App {
   font-family: var(--default-font);
 }
+
+.container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

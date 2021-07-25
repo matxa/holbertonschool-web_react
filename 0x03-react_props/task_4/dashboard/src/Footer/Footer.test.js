@@ -1,8 +1,8 @@
 import React from 'react';
+import { shallow } from 'enzyme';
 import './Footer.css';
 import { getFullYear, getFooterCopy } from '../utils/utils';
 import Footer from './Footer';
-import { shallow } from 'enzyme';
 
 describe('Test Footer component', () => {
 

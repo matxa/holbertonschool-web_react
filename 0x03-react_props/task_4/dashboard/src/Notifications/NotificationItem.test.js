@@ -19,7 +19,6 @@ describe('Test NotificationItem', () => {
 
   it('Test NotificationItem renders the right html', () => {
     const notification = shallow(<NotificationItem type="urgent" html={{ __html: getLatestNotification() }}/>);
-    console.log(notification.props())
     expect([
       notification.props()['data-notification-type'],
       notification.props()['dangerouslySetInnerHTML']['__html']
