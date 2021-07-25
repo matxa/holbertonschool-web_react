@@ -45,21 +45,6 @@ export const listNotifications = [
 ]
 
 class App extends Component {
-
-  componentDidMount() {
-    document.addEventListener('keydown', (event) => {
-      if (event.key == 'h' && event.ctrlKey) {
-        alert("Logging you out");
-        this.props.logOut()
-      }
-    });
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('keydown');
-    console.log("bye")
-  }
-
   render() {
     return (
       <React.Fragment>
@@ -77,13 +62,11 @@ class App extends Component {
 }
 
 App.propTypes = {
-  isLoggedIn: PropTypes.bool,
-  logOut: PropTypes.func
+  isLoggedIn: PropTypes.bool
 }
 
 App.defaultProps = {
-  isLoggedIn: false,
-  logOut: () => {}
+  isLoggedIn: false
 }
 
 export default App
