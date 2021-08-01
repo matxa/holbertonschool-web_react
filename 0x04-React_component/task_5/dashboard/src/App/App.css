@@ -1,0 +1,8 @@
+:root {
+  --holberton-color: #e0344c;
+  --default-font: Sans-serif;
+}
+
+.App {
+  font-family: var(--default-font);
+}
