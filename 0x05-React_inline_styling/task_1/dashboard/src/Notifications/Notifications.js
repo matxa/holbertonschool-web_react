@@ -4,7 +4,6 @@ import NotificationItem from './NotificationItem';
 import PropTypes from 'prop-types';
 import NotificationItemShape from './NotificationItemShape';
 import { StyleSheet, css } from 'aphrodite';
-import mainStyles from '../styles';
 import './Notifications.css';
 
 export function clicked() {
