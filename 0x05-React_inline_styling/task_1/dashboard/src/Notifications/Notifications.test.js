@@ -7,8 +7,19 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import { getLatestNotification } from '../utils/utils';
 import { listNotifications } from '../App/App';
+import { StyleSheetTestUtils } from 'aphrodite';
+
+
 
 describe('Test various components of the Notifications', () => {
+
+  beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+  });
+
+  afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+  });
 
   it('Notifications renders without crashing', () => {
     shallow(<Notifications />);

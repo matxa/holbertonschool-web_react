@@ -1,8 +1,19 @@
 import { shallow , mount} from 'enzyme';
 import BodySection from './BodySection';
 import React from 'react';
+import { StyleSheetTestUtils } from 'aphrodite';
+
+
 
 describe('BodySection Test', () => {
+
+  beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+  });
+
+  afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+  });
 
   it('BodySection renders without any errors', () => {
     shallow(<BodySection />);

@@ -3,8 +3,20 @@ import CourseListRow from './CourseListRow';
 import CourseList from './CourseList';
 import { shallow } from 'enzyme';
 import { listCourses } from '../App/App';
+import { StyleSheetTestUtils } from 'aphrodite';
+
+
 
 describe('Test CourseList component', () => {
+
+  beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+  });
+
+  afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+  });
+
   it('CourseList renders without crashing', () => {
     shallow(<CourseList />);
   });

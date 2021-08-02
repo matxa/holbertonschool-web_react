@@ -3,8 +3,17 @@ import { shallow } from 'enzyme';
 import './Footer.css';
 import { getFullYear, getFooterCopy } from '../utils/utils';
 import Footer from './Footer';
+import { StyleSheetTestUtils } from 'aphrodite';
 
 describe('Test Footer component', () => {
+
+  beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+  });
+
+  afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+  });
 
   it('Footer renders without crashing', () => {
     shallow(<Footer />);

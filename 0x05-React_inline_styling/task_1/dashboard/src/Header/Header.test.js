@@ -2,8 +2,18 @@ import React from 'react';
 import logo from '../assets/holberton-logo.jpeg';
 import { shallow, mount } from 'enzyme';
 import Header from './Header';
+import { StyleSheetTestUtils } from 'aphrodite';
+
 
 describe('Test Header component', () => {
+
+  beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+  });
+
+  afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+  });
 
   it('Header renders without crashing', () => {
     shallow(<Header />);

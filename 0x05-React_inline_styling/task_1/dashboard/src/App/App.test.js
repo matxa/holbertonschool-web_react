@@ -7,8 +7,19 @@ import Notifications from '../Notifications/Notifications';
 import { shallow } from 'enzyme';
 import React from 'react';
 import CourseList from '../CourseList/CourseList';
+import { StyleSheetTestUtils } from 'aphrodite';
+
+
 
 describe('Test various components of the App', () => {
+
+  beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+  });
+
+  afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+  });
 
   it('App renders without crashing', () => {
     shallow(<App />);

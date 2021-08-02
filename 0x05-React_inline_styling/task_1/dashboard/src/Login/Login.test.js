@@ -2,8 +2,19 @@ import React from 'react';
 import './Login.css'
 import Login from "./Login";
 import { shallow } from 'enzyme';
+import { StyleSheetTestUtils } from 'aphrodite';
+
+
 
 describe('Test Login component', () => {
+
+  beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+  });
+
+  afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+  });
 
   it('App renders without crashing', () => {
     shallow(<Login />);

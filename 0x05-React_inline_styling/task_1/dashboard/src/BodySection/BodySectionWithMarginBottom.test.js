@@ -1,8 +1,20 @@
 import React from "react";
 import { shallow } from "enzyme";
 import BodySectionWithMarginBottom from "./BodySectionWithMarginBottom";
+import { StyleSheetTestUtils } from 'aphrodite';
+
 
 describe('Test BodySectionWithMarginBottom', () => {
+
+  beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+  });
+
+  afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+  });
+
+
   it('BodySectionWithMarginBottom renders without crashing', () => {
     shallow(<BodySectionWithMarginBottom />);
   });
