@@ -5,20 +5,20 @@ import CourseShape from './CourseShape';
 import { StyleSheet, css } from 'aphrodite';
 import './CourseList.css';
 
-const styles = StyleSheet.create({
-  table: {
-    width: '80%',
-    textAlign: 'center',
-    border: '1px solid #dedede',
-    thead: {
-      th: {
-        borderBottom: '1px solid #dedede'
+function CourseList(props) {
+
+  const styles = StyleSheet.create({
+    table: {
+      width: '80%',
+      textAlign: 'center',
+      border: '1px solid #dedede',
+      thead: {
+        th: {
+          borderBottom: '1px solid #dedede'
+        }
       }
     }
-  }
-});
-
-function CourseList(props) {
+  });
 
   return (
     <table id="CourseList" className={css(styles.table)}>

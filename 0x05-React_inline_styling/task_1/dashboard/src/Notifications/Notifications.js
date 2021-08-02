@@ -61,7 +61,7 @@ export default class Notifications extends Component {
       position: 'absolute',
       top: 40,
       right: 5,
-      border: `1px dashed ${mainStyles.root.holbertonColor}`,
+      border: '1px dashed #e0344c',
       padding: 20,
       width: 400,
     },
