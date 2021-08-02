@@ -10,21 +10,21 @@ export default function Header() {
       justifyContent: 'flex-start',
       alignItems: 'center',
       borderBottom: '3px solid #e0344c',
-      h1: {
-        color: '#e0344c',
-      },
-      img: {
-        width: '250px',
-        height: '250px',
-        display: 'inline',
-      }
     },
+    h1: {
+      color: '#e0344c',
+    },
+    img: {
+      width: '250px',
+      height: '250px',
+      display: 'inline',
+    }
   });
 
   return (
     <div className={css(styles.header)}>
-      <img src={logo} alt="Holberton Logo"></img>
-      <h1>School dashboard</h1>
+      <img src={logo} alt="Holberton Logo" className={css(styles.img)}></img>
+      <h1 className={css(styles.h1)}>School dashboard</h1>
     </div>
   );
 }
