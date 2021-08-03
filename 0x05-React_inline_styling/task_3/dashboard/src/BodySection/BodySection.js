@@ -3,7 +3,7 @@ import { StyleSheet, css } from 'aphrodite';
 
 const styles = StyleSheet.create({
   bodySection: {
-    margin: 'auto',
+    margin: 40,
   }
 });
 

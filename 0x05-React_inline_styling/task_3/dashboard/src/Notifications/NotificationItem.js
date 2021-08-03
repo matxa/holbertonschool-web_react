@@ -10,6 +10,12 @@ const NotificationItem = React.memo((props) => {
     },
     default: {
       color: 'blue',
+    },
+    li: {
+      '@media (max-width: 900px)': {
+        borderBottom: '1px solid black',
+        padding: 10,
+      },
     }
   });
 
@@ -22,7 +28,7 @@ const NotificationItem = React.memo((props) => {
       data-notification-type={props.type}
       dangerouslySetInnerHTML={props.html}
       onClick={props.markAsRead}
-      className={ type && props.type === 'default' ? css(styles.default) : css(styles.urgent) }
+      className={ type && props.type === 'default' ? css(styles.default, styles.li) : css(styles.urgent, styles.li) }
     >{props.value}</li>
   );
 });

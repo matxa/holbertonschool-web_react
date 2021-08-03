@@ -62,7 +62,26 @@ export default class Notifications extends Component {
       border: '1px dashed #e0344c',
       padding: 20,
       width: 400,
+      backgroundColor: 'white',
+      zIndex: 1000,
+      '@media (max-width: 900px)': {
+        top: 0,
+        left: 0,
+        right: 0,
+        width: '100%',
+        height: '100vh',
+        fontSize: 20,
+        listStyle: 'none',
+        padding: 0,
+        border: 'none',
+      },
     },
+    ul: {
+      '@media (max-width: 900px)': {
+        padding: 0,
+        listStyle: 'none',
+      },
+    }
   });
 
   render() {
@@ -75,7 +94,7 @@ export default class Notifications extends Component {
           <div className={css(this.styles.Notifications)}>
             <p>Here is the list of notifications</p>
             <button aria-label="Close" id="close" onClick={clicked} style={imageStyle}><img src={closeIcon} alt="close-icon" style={closeIconStyle}></img></button>
-            <ul>
+            <ul className={css(this.styles.ul)}>
               {
                 this.props.listNotifications.length > 0
                 ?
