@@ -54,12 +54,12 @@ describe('Test various components of the Notifications', () => {
     expect(wrapper.containsMatchingElement(menuItem)).toEqual(true);
   });
 
-  it('menuItem is being displayed when displayDraw is true', () => {
+  it('menuItem is not being displayed when displayDraw is true', () => {
     const wrapper = shallow(<Notifications displayDrawer={true} listNotifications={listNotifications}/>);
     const menuItem = (
       <div>Your notifications</div>
     );
-    expect(wrapper.containsMatchingElement(menuItem)).toEqual(true);
+    expect(wrapper.containsMatchingElement(menuItem)).toEqual(false);
   });
 
   it('Notification is not being displayed when displayDraw is false', () => {
