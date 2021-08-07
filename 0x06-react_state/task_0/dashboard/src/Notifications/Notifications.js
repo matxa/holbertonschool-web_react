@@ -139,7 +139,7 @@ export default class Notifications extends Component {
             <button
               aria-label="Close"
               id="close"
-              onClick={() => { clicked(); handleHideDrawer(); }}
+              onClick={ handleHideDrawer }
               style={imageStyle}
             >
               <img src={closeIcon} alt="close-icon" style={closeIconStyle}></img>
