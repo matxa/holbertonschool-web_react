@@ -114,4 +114,22 @@ describe('Test various components of the Notifications', () => {
     expect(spyOnConsoleLog).toHaveBeenLastCalledWith('Notification 2 has been marked as read');
   });
 
+  it('menuItem click calls handleDisplayDrawer', () => {
+    const mockHandleDisplayDrawer = jest.fn();
+    const wrapper = shallow(<Notifications listNotifications={listNotifications} handleDisplayDrawer={mockHandleDisplayDrawer} />);
+    const spy = jest.spyOn(wrapper.instance().props, 'handleDisplayDrawer');
+    wrapper.find('.menuItem').simulate('click');
+    expect(spy).toHaveBeenCalled();
+    spy.mockRestore();
+	});
+
+  it('close button calls handleHideDrawer', () => {
+    const mockHandleHideDrawer = jest.fn();
+    const wrapper = shallow(<Notifications displayDrawer={true} listNotifications={listNotifications} handleHideDrawer={mockHandleHideDrawer}/>);
+    const spy = jest.spyOn(wrapper.instance().props, 'handleHideDrawer');
+    wrapper.find('.Notifications button').simulate('click');
+    expect(spy).toHaveBeenCalled();
+    spy.mockRestore();
+	});
+
 });
