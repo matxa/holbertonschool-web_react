@@ -54,7 +54,7 @@ describe('Test various components of the App', () => {
       const wrapper = shallow(<App />);
       const appInstance = wrapper.instance();
       appInstance.handleDisplayDrawer();
-      const { displayDrawer } = appInstance.state;
+      const { displayDrawer } = wrapper.state();
       expect(displayDrawer).toEqual(true);
     });
     it('should change displayDrawer value to false', () => {
@@ -62,7 +62,7 @@ describe('Test various components of the App', () => {
       const appInstance = wrapper.instance();
       appInstance.handleDisplayDrawer();
       appInstance.handleHideDrawer();
-      const { displayDrawer } = appInstance.state;
+      const { displayDrawer } = wrapper.state();
       expect(displayDrawer).toEqual(false);
     });
   });
