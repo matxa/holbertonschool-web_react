@@ -119,13 +119,16 @@ export default class Notifications extends Component {
   });
 
   render() {
+
+    const { displayDrawer, handleDisplayDrawer, handleHideDrawer } = this.props;
+
     return (
       <div>
         {
-          this.props.displayDrawer ? '' :
+          displayDrawer ? '' :
           <div
             className={ css(this.styles.menuItem) }
-            onClick={ this.props.handleDisplayDrawer }
+            onClick={ handleDisplayDrawer }
           >Your notifications</div>
         }
         {
@@ -136,7 +139,7 @@ export default class Notifications extends Component {
             <button
               aria-label="Close"
               id="close"
-              onClick={() => { clicked(); this.props.handleHideDrawer(); }}
+              onClick={() => { clicked(); handleHideDrawer(); }}
               style={imageStyle}
             >
               <img src={closeIcon} alt="close-icon" style={closeIconStyle}></img>
