@@ -127,14 +127,14 @@ export default class Notifications extends Component {
         {
           displayDrawer ? '' :
           <div
-            className={ css(this.styles.menuItem) }
+            className={ 'menuItem ' + css(this.styles.menuItem) }
             onClick={ handleDisplayDrawer }
           >Your notifications</div>
         }
         {
           this.props.displayDrawer
           ? 
-          <div className={css(this.styles.Notifications)}>
+          <div className={ 'Notifications ' + css(this.styles.Notifications) }>
             <p>Here is the list of notifications</p>
             <button
               aria-label="Close"
